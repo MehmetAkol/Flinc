@@ -15,6 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <script src = "<?php echo base_url(); ?>js/bootstrap.js"></script>
     <script src = "<?php echo base_url(); ?>js/jquery-3.2.1.js"></script>
 
+
 </head>
 <body>
 <?php include_once "templates/loginPage/loginTemplate.php"; ?>
