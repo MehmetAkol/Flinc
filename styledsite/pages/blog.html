@@ -8,6 +8,8 @@
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 	<title>Profile Page</title>
+
+	
 </head>
 
 <body class="animated fadeIn">
@@ -46,8 +48,36 @@
 			<h1>Blog Post<a href="http://google.com"><img src="assets/images/hyperlink.png"></a></h1>
 			<h2>Date</h2>
 			<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis interdum molestie. Mauris ornare est tempus, feugiat arcu ac, venenatis velit. Donec et elit efficitur, mattis dui hendrerit, sollicitudin purus.</h3>
-			<img class="blog-img" src="../assets/images/preview.jpg" />
+			<img class="blog-img mySlides" src="../assets/images/4.jpg" />
+			<img class="blog-img mySlides" src="../assets/images/1.png">
+			<img class="blog-img mySlides" src="../assets/images/2.png">
+			<img class="blog-img mySlides" src="../assets/images/3.png">
+			<div class="image-control">
+				<button class="gallery-btn btn-left" onclick="plusDivs(-1)">&#10094;</button>
+				<button class="gallery-btn btn-right" onclick="plusDivs(+1)">&#10095;</button>
+			</div>
 		</div>
 	</div>
+
+
+	<script>
+		var slideIndex = 1;
+		showDivs(slideIndex);
+
+		function plusDivs(n) {
+    		showDivs(slideIndex += n);
+		}
+
+		function showDivs(n) {
+		    var i;
+		    var x = document.getElementsByClassName("mySlides");
+		    if (n > x.length) {slideIndex = 1} 
+		    if (n < 1) {slideIndex = x.length} ;
+		    for (i = 0; i < x.length; i++) {
+		        x[i].style.display = "none"; 
+		    }
+		    x[slideIndex-1].style.display = "block"; 
+		}
+	</script>
 </body>
 </html>

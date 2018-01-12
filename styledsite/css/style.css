@@ -145,16 +145,44 @@ h2 {
 }
 
 .blog-img {
-	width: 55%;
+	width: 66%;
+	height: 400px;
 	display:block;
+    display:block;
     margin:auto;
-    margin-left: auto !important;
-    margin-top:25px;
-    border-radius:5px;
+    object-fit: cover;
 	-webkit-box-shadow: 0 2px 2px -2px rgba(0,0,0,0.61); 
 	box-shadow: 0 2px 2px -2pxx rgba(0,0,0,0.61);
 
 
+}
+
+
+.image-control {
+	width: 66%;
+	height: 5%;
+	display:block;
+    margin:auto;
+}
+
+.gallery-btn {
+	width: 50%;
+	background-color: #009433;
+	border: 0px white solid;
+}
+
+.gallery-btn:focus {
+	background-color: #00ce47;
+}
+
+
+.btn-left {
+	float: left;
+	border-right:2px white solid;
+}
+
+.btn-right {
+	border-left:2px white solid;
 }
 
 
