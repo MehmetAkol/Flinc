@@ -30,9 +30,7 @@
 	<meta name="HandheldFriendly" content="true">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-	<title>Profile Page</title>
-
-	
+	<title>Blog</title>
 </head>
 
 <body class="animated fadeIn">
@@ -48,43 +46,40 @@
 	</div>
 
 	<h1 class="h1left">Company Blog</h1>
-	<div class="blog-item">
-		<img class="blog-avatar" src="../assets/images/a.jpg">
-		<div class="blog-content">
-			<h1>Blog Post<a href="http://google.com"><img class="hyperlink" src="../assets/images/hyperlink.png"></a></h1>
-			<h2>Date</h2>
-			<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis interdum molestie. Mauris ornare est tempus, feugiat arcu ac, venenatis velit. Donec et elit efficitur, mattis dui hendrerit, sollicitudin purus. </h3>
-		</div>
-	</div>
 
-	<div class="blog-item">
-		<img class="blog-avatar" src="../assets/images/a.jpg">
-		<div class="blog-content">
-			<h1>Blog Post<a href="http://google.com"><img class="hyperlink" src="../assets/images/hyperlink.png"></a></h1>
-			<h2>Date</h2>
-			<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc arcu velit, tempus in metus quis, ultrices dapibus nisi. Praesent vel iaculis tellus. Donec eget turpis ut lorem lobortis molestie id ut felis. Mauris iaculis vel sapien sit amet rhoncus.</h3>
-		</div>
-	</div>
 
-	<div class="blog-item">
-		<img class="blog-avatar" src="../assets/images/a.jpg">
-		<div class="blog-content">
-			<h1>Blog Post<a href="http://google.com"><img class="hyperlink" src="../assets/images/hyperlink.png"></a></h1>
-			<h2>Date</h2>
-			<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis interdum molestie. Mauris ornare est tempus, feugiat arcu ac, venenatis velit. Donec et elit efficitur, mattis dui hendrerit, sollicitudin purus.</h3>
-			<img class="blog-img mySlides" src="../assets/images/4.jpg" />
-			<img class="blog-img mySlides" src="../assets/images/1.png">
-			<img class="blog-img mySlides" src="../assets/images/2.png">
-			<img class="blog-img mySlides" src="../assets/images/3.png">
-			<div class="image-control">
-				<button class="gallery-btn btn-left" onclick="plusDivs(-1)">&#10094;</button>
-				<button class="gallery-btn btn-right" onclick="plusDivs(+1)">&#10095;</button>
+
+<?php
+$sqlq = "SELECT * FROM posts ORDER BY id DESC";
+$result = $con->query($sqlq);
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        $title = $row["title"];
+        $author = $row["author"];
+        $content = $row["content"];
+            $str = <<<EOF
+            <div class="blog-item">
+				<img class="blog-avatar" src="../assets/images/a.jpg">
+				<div class="blog-content">
+				<h1>$title<a href="http://google.com"><img class="hyperlink" src="../assets/images/hyperlink.png"></a></h1>
+				<h2>$author</h2>
+				<h3>$content. </h3>
+				</div>
 			</div>
-		</div>
-	</div>
+EOF;
+        echo $str;
+       
+        
+        
+    }
+} else {
+    echo "0 results";
+}
+$con->close();
+?>
 
-
-	<script>
+<script>
 		var slideIndex = 1;
 		showDivs(slideIndex);
 
@@ -103,6 +98,7 @@
 		    x[slideIndex-1].style.display = "block"; 
 		}
 	</script>
+
 </body>
 </html>
 <!--else-->

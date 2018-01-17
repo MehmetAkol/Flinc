@@ -22,10 +22,9 @@
     $sql = "SELECT * FROM users WHERE username = '$username'";
  ?>
 
-
 <html>
 <head>
-  <title>Register</title>
+  <title>Add post</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -54,30 +53,22 @@
       <div class="row">
           <div class="col-xs-12">
               <div class="form-wrap">
-                <h1>Register an account</h1>
-                    <form role="form" action="sql/register.php" method="post" id="login-form" autocomplete="off">
+                <h1>Add blog post</h1>
+                    <form role="form" action="sql/addblogpost.php" method="post" id="login-form" autocomplete="off">
                       <div class="form-group">
-                            <label for="username" class="sr-only">First Name</label>
-                            <input type="username" name="fname" id="email" class="form-control" placeholder="First Name">
+                            <label for="title" class="sr-only">Title</label>
+                            <input type="username" name="title" id="email" class="form-control" placeholder="Title">
                         </div>
                         <div class="form-group">
-                            <label for="username" class="sr-only">Last Name</label>
-                            <input type="username" name="lname" id="email" class="form-control" placeholder="Last Name">
+                            <label for="author" class="sr-only">Author</label>
+                            <input type="username" name="author" id="email" class="form-control" placeholder="Author">
                         </div>
                         <div class="form-group">
-                            <label for="username" class="sr-only">Username</label>
-                            <input type="username" name="username" id="email" class="form-control" placeholder="Username">
-                        </div>
-                        <div class="form-group">
-                            <label for="key" class="sr-only">Password</label>
-                            <input type="password" name="password" id="key" class="form-control" placeholder="Password">
-                        </div>
-                        <div class="form-group">
-                            <label for="username" class="sr-only">Email</label>
-                            <input type="email" name="email" id="email" class="form-control" placeholder="somebody@example.com">
+                            <label for="content" class="sr-only">Content</label>
+                            <input type="username" name="content" id="email" class="form-control contenttxt" placeholder="Say what you want to say.">
                         </div>
                         
-                        <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Register">
+                        <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Post">
                     </form>
                     <hr> <hr> <hr> <hr> <hr> <hr>
               </div>
@@ -112,3 +103,4 @@
  
  <?php }
  ?>
+

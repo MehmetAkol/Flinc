@@ -71,7 +71,7 @@
 
       <article class="c3">
         <header class="major">
-          <h3><a href="#" class="link">Lorem ipsum</a></h3>
+          <h3><a href="pages/admin.php" class="link">Admin Panel</a></h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus venenatis lorem mi, at pellentesque sem maximus id.</p>
         </header>
       </article>

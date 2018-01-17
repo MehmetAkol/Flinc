@@ -90,3 +90,6 @@ body {
     color: inherit;
 }
 
+.contenttxt {
+    height:300px !important;
+}
