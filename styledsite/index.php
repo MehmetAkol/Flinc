@@ -57,14 +57,14 @@
     <section id="one" class="tiles">
       <article class="c1">
         <header class="major ">
-          <h3><a href="pages/blog.html" class="link">Blog</a></h3>
+          <h3><a href="pages/blog.php" class="link">Blog</a></h3>
           <p>A blog where you can keep track of progress.</p>
         </header>
       </article>
 
       <article class="c2">
         <header class="major">
-          <h3><a href="pages/userpage.html" class="link">User Page</a></h3>
+          <h3><a href="pages/userpage.php" class="link">User Page</a></h3>
           <p>Manage your user information here.</p>
         </header>
       </article>
