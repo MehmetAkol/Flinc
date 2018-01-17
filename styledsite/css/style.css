@@ -145,7 +145,7 @@ h2 {
 }
 
 .blog-img {
-	width: 66%;
+	width: 88%;
 	height: 400px;
 	display:block;
     display:block;
@@ -153,13 +153,11 @@ h2 {
     object-fit: cover;
 	-webkit-box-shadow: 0 2px 2px -2px rgba(0,0,0,0.61); 
 	box-shadow: 0 2px 2px -2pxx rgba(0,0,0,0.61);
-
-
 }
 
 
 .image-control {
-	width: 66%;
+	width: 88%;
 	height: 5%;
 	display:block;
     margin:auto;
@@ -185,6 +183,15 @@ h2 {
 	border-left:2px white solid;
 }
 
+.hyperlink {
+	width:16px;
+	height:auto;
+}
+
+.h1left {
+	padding:25px;
+	text-align:left !important;
+}
 
 /* search/upper bar css */
 .upperbar {
@@ -221,16 +228,49 @@ input[type=text]:active {
 /* misc */
 
 ::-webkit-scrollbar {
-width: 10px;
-background: #fff;
-border: 1px solid #000; 
-
+	width: 10px;
+	background: #fff;
+	border: 1px solid #000; 
 }
 
-::-webkit-scrollbar-thumb {
-background: #4c4c4c;
-border: 1px solid #000; 
+	::-webkit-scrollbar-thumb {
+	background: #4c4c4c;
+	border: 1px solid #000; 
 }
 
 
+.warning-container {
+	position: relative;
+  	height: 100%;
+}
 
+.warningdiv {
+	width:200px;
+	height:200px;
+	margin: auto;
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	border: solid #4cd37a;
+}
+
+.warningdiv h1, .warningdiv h2 {
+	text-transform:uppercase;
+}
+
+.warningdiv a, .warningdiv a:visited, .warningdiv a:active {
+	text-decoration:none;
+	color: #4cd37a;
+	-webkit-transition: 1s; 
+    transition: 1s;
+}
+
+.warningdiv a:hover {
+	color: #009433;
+	border-bottom:3px #009433 solid;
+	-webkit-transition: 1s; 
+    transition: 1s;
+}
+
+.warninglink:hover ~ .warningdiv {
+	border: 1px solid #009433;
+}
