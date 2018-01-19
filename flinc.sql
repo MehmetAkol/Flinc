@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 18, 2018 at 12:02 AM
+-- Generation Time: Jan 19, 2018 at 08:38 AM
 -- Server version: 10.1.26-MariaDB
--- PHP Version: 7.1.9
+-- PHP Version: 7.1.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -21,6 +21,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `flinc`
 --
+CREATE DATABASE IF NOT EXISTS `flinc` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `flinc`;
 
 -- --------------------------------------------------------
 
@@ -44,7 +46,8 @@ INSERT INTO `posts` (`id`, `title`, `content`, `author`) VALUES
 (2, 'Test 2', 'Hello. This is a test.', 'Tester 2'),
 (3, 'Test 3', ' 			<img class=\"blog-img mySlides\" src=\"../assets/images/4.jpg\" /> 			<img class=\"blog-img mySlides\" src=\"../assets/images/1.png\"> 			<img class=\"blog-img mySlides\" src=\"../assets/images/2.png\"> 			<img class=\"blog-img mySlides\" src=\"../assets/images/3.png\"> 			<div class=\"image-control\"> 				<button class=\"gallery-btn btn-left\" onclick=\"plusDivs(-1)\">&#10094;</button> 				<button class=\"gallery-btn btn-right\" onclick=\"plusDivs(+1)\">&#10095;</button> 			</div>', 'Tester 3'),
 (4, 'test bro', 'sup g', 'lol'),
-(5, 'dasd', 'asdasd', 'asd');
+(5, 'dasd', 'asdasd', 'asd'),
+(6, 'xfsfsd', 'dsfdsfsd', 'fsfdsf');
 
 -- --------------------------------------------------------
 
@@ -96,14 +99,12 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-COMMIT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
